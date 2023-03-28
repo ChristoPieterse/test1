@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🦁 On the ${{ github.event_name }} Action, running on ${{ runner.os }} server. Your branch is ${{ github.ref }}, repository ${{ github.repository }}."
-      - run: echo "Links: Docker Images: https://docs.github.com/en/actions/publishing-packages/publishing-docker-images"
-      - run: echo "Links: Java + Tests: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle"
+      - run: echo "Links Docker Images https://docs.github.com/en/actions/publishing-packages/publishing-docker-images"
+      - run: echo "Links Java + Tests https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle"
       - uses: actions/checkout@v3
       - name: Set up JDK 17
         uses: actions/setup-java@v3
