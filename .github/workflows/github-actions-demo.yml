@@ -19,3 +19,11 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }}."
+      - name: Build and push Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: ${{ matrix.platforms }}
+          push: true
+          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Team Leeu
